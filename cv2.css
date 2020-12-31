@@ -1,0 +1,310 @@
+main{
+  margin: 3% 10%;
+  background-color:#f1f1f1;
+  display:grid;
+  border-radius: 20px;
+  grid-template-rows: 35% 70%;
+  font-family: 'Itim', cursive;
+box-shadow: 2px 5px 2px green; 
+}
+.avt > img{
+  width:200px;
+  height:200px;
+  border-radius:50%;
+}
+.introduct {
+ background-color: #c5ff00;
+  display:grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+    grid-template-areas: 
+  "name infor"
+  "name contact";
+
+}
+#myname{
+  font-size: 30px; 
+  line-height: 60px; 
+  background-color: white; 
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px; 
+  width:200px; 
+  margin-left:  200px; 
+  margin-top: 40px;}
+.name{
+  float: left ;
+  text-align: center;
+  grid-area: name;
+}
+.infor{
+  font-size:15px;
+  display:block;
+  padding:5%;
+  grid-area: infor;
+}
+.infor {
+  float: right;
+}
+.contact{
+  grid-area: contact;
+}
+.contact i{
+  font-size:30px;
+     width:50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: WHITE;
+      transition: width 1s height 1s;
+
+}
+.contact i:hover{
+  width: 60px;
+  height: 60px;
+      transition: width 1s height 1s;
+
+     }
+.contact a{
+  color:black;
+  text-align:center;
+  padding: 0 2%;
+
+}
+.contact  a:link, a:visited{
+text-decoration: none;
+
+}
+@media screen and (max-width: 1000px)
+{
+    .introduct{
+      grid-template-columns: 1fr;
+      text-align: center;
+      grid-template-rows: 1fr 0.8fr 0.4fr;
+      grid-template-areas:
+      /* Only change code below this line */
+         "name"
+         "infor"
+         "contact";
+      /* Only change code above this line */
+    }
+  }
+#git i{
+    background: linear-gradient(45deg, #333333, #626b73);
+    box-shadow: 0px 4px 20px rgba(19, 127, 212, 0.7);
+  }
+ 
+#cdpen i{
+      background: linear-gradient(45deg, #324e63, #414447);
+    box-shadow: 0px 4px 20px rgba(55, 75, 90, 0.6);
+
+}
+#mail i{
+  background: linear-gradient(45deg, #d5135a, #f02924);
+    box-shadow: 0px 4px 20px rgba(223, 45, 70, 0.6);
+    color: white;
+}
+#fb i{
+   background: linear-gradient(45deg, #0A82ED, #1da1ff);
+    box-shadow: 0px 4px 20px rgba(23, 45, 223, 0.6);
+    color: white; 
+}
+.line{
+  width: 5px;
+  height: 80%;
+  border-radius: 20px;
+  grid-area: linee;
+  background-color: lightgreen; 
+}
+.content_cv{
+  padding:  3%;
+  grid-column-gap: 2%;
+  display: grid;
+  grid-template-columns: 40% 1% 59%;
+  grid-template-rows:2fr 1.5fr 2fr;
+  grid-template-areas: 
+  "target  linee skills "
+  "education linee language"
+  "fav linee experience";
+
+}
+
+.progress{
+  margin-right:  15%;
+  background-color: #fff; !important;
+      box-shadow: 0px 4px 10px rgba(13, 145, 70, 0.3);
+      border-radius: 30px !important;
+      border: 1px solid green;
+      animation-name: run;
+      animation-fill-mode: forwards;
+      animation-duration: 5s;
+    }
+   @keyframes run {
+ 
+ from {
+width: 0%;
+ }
+ to 
+{
+width: 80%;
+ } 
+
+}
+.progress-bar{
+  background-color:lightgreen !important;
+  color: black !important;
+
+}
+
+#tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Định dạng text trong tooltip */
+#tooltip .tooltiptext {
+  visibility: hidden;
+  width: 90px;
+  background-color: white;
+  color: #0f0;
+  border: 2px solid green;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+/* Xác định vị trí tooltip */
+  position: absolute;
+   top: 3em;
+ left: 5%; 
+
+  z-index: 1;
+}
+
+/* Cho hiển thị tooltip khi di chuột qua vùng chứa tooltip */
+#tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+#tooltipp {
+  position: relative;
+  display: inline-block;
+}
+
+/* Định dạng text trong tooltip */
+#tooltipp .tooltiptextt {
+  visibility: hidden;
+  width: 50px;
+  background-color: white;
+  color: #0f0;
+  border: 2px solid green;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  left: 40%;
+  top:-3em; 
+  z-index: 1;
+}
+
+/* Cho hiển thị tooltip khi di chuột qua vùng chứa tooltip */
+#tooltipp:hover .tooltiptextt {
+  visibility: visible;
+}
+.education{
+grid-area: education ;
+
+}
+.experience{
+grid-area: experience;
+
+}
+.target {
+grid-area: target  ;
+}
+.skills{
+grid-area: skills ;
+
+}
+.language{
+  margin-top: 20px;
+  grid-area: language ;
+
+}
+.fav{
+grid-area: fav ;
+display: inline;
+
+}
+.fav i{
+padding: 0 3%;
+font-size: 20px;
+align-items: center;
+position: relative;
+left: 25%;
+top: 25%;
+}
+.fav p {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background-color: #91ff00 ;
+  border:3px solid green;
+  align-items: center;
+  display: inline-block;
+margin: 0 5%;
+}
+
+.rating-container .start-container .start1 {
+
+  font-size: 15px;
+  color: green !important;
+  padding-left: 5%;
+}
+.rating-container .start-container .start {
+    font-size: 15px;
+    box-sizing: border-box;
+    color: white;
+  padding-left: 5%;
+
+}
+.rating-container .start-container{
+  background: lightgreen !important;
+  border-radius: 30px;
+  width:70%;
+}
+@media screen and (max-width: 650px)
+{
+.rating-container .start-container .start1 {
+
+  font-size: 15px;
+}
+.rating-container .start-container .start {
+    font-size: 15px;
+}
+.rating-container .start-container{
+  width:100%;
+} 
+.icon-fav {
+  font-size: 15px;
+
+}
+}
+
+  @media screen and (max-width: 1000px)
+{
+    .content_cv{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 0.5fr 1fr 1fr 0.5fr 1fr ;
+      grid-template-areas:
+      /* Only change code below this line */
+         "target"
+         "language"
+         "skills"
+         "education"
+        "experience"
+        "fav";
+      /* Only change code above this line */
+    }
+  }
